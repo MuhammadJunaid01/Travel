@@ -1,5 +1,5 @@
 // utilities
-@import "../SCSS/_utilitys/navbar";
+// @import "../SCSS/_utilitys/navbar";
 
 *,
 *::after,
@@ -31,6 +31,66 @@ p {
   color: $textColor;
   font-size: 20px;
 }
+// start navbar
+.navigateContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logoContainer {
+  display: flex;
+  align-items: center;
+  .logo img {
+    width: 60px;
+    height: 60px;
+  }
+  .logoText {
+    color: #144e5a;
+    font-size: 33px;
+    margin-left: 5px;
+  }
+}
+.navbarContainer {
+  // opacity: 0;
+  // pointer-events: none;
+  // transition: all 1s ease;
+}
+
+.navbarContainer ul {
+  display: flex;
+}
+.navbarContainer ul li {
+  list-style-type: none;
+  margin-right: 20px;
+  font-size: 23px;
+}
+//start frofile sec:
+.frofileContainer {
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: 1px solid gray;
+  display: flex;
+  justify-content: space-around;
+  .user {
+    margin-left: 20px;
+  }
+}
+
+// start collapse style
+
+.collapse {
+  cursor: pointer;
+  display: none;
+  overflow: hidden;
+}
+.close_icon {
+  display: none;
+}
+$small: 250px;
+$medium: 900px;
+$large: 1200px;
+$xl: 1400;
+// end navbar
 // start main_banner
 .mainBanner_container {
   display: flex;
@@ -41,14 +101,20 @@ p {
   position: relative;
   .main_banner_info {
     margin-left: 40px;
+    width: 50%;
     h1 {
       font-size: 50px;
       font-weight: 900;
       color: #1c2520;
     }
   }
-  .main_banner_image img {
-    height: 700px;
+  .main_banner_image {
+    // height: 600px;
+    width: 50%;
+    img {
+      width: 100%;
+      height: 550px;
+    }
   }
 }
 .searche_bar_container {
@@ -58,7 +124,7 @@ p {
   justify-content: space-around;
   align-items: center;
   position: absolute;
-  top: 94%;
+  top: 96%;
   left: 13%;
   padding: 20px 0px;
   border-radius: 14px;
@@ -105,14 +171,16 @@ p {
     width: 35%;
     padding: 10px;
     background-color: bisque;
+    border-radius: 6px;
     margin-right: 7px;
     height: 400px;
     .destination_card_banner img {
-      height: 60%;
+      height: 250px;
       width: 100%;
       border-radius: 13px;
     }
     .destination_card_info {
+      margin-top: 18px;
       .card_title_price {
         display: flex;
         justify-content: space-between;
@@ -131,17 +199,184 @@ p {
   }
 }
 // end destination card
+// start wite experience style
+.wite_our_experience_container {
+  background-color: #f5e9db;
+  position: relative;
+  .wite_our_experience_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .wite_our_experience_banner {
+      width: 50%;
+      img {
+        width: 100%;
+        height: 600px;
+      }
+    }
+    .wite_our_experience_info {
+      width: 50%;
+      h1,
+      p {
+        margin-bottom: 30px;
+      }
+      button {
+        background-color: #144e5a;
+        padding: 10px 25px;
+        color: white;
+        font-size: large;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+      }
+    }
+  }
+  .wite_experience_card {
+    background-color: white;
+    padding: 20px;
+    i,
+    h1 {
+      margin-bottom: 15px;
+    }
+  }
+  .wite_card_top {
+    position: absolute;
+    top: 60px;
+    left: 10px;
+    border-radius: 10px;
+  }
+  .wite_card_right {
+    position: absolute;
+    top: 200px;
+    left: 420px;
+    border-radius: 10px;
+  }
+  .wite_card_bottom {
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    border-radius: 10px;
+  }
+}
 
-// end explore destination
+// end wite experience style
+
+// start inspiration style
+.inspiration_container {
+  padding: 30px;
+  .inspiration_header {
+    text-align: center;
+  }
+  .inspiration_menubar {
+    margin-top: 40px;
+    border-bottom: 2px solid #144e5a79;
+    ul {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+    ul li {
+      list-style-type: none;
+      border: 1px solid #144e5a;
+      padding: 6px 20px;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+  }
+  .inspiration_card_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    margin-top: 20px;
+    .inspiration_card {
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      padding: 20px;
+      margin-bottom: 6px;
+      margin-right: 10px;
+      text-align: center;
+      border-radius: 12px;
+      h3 {
+        color: #144e5a;
+      }
+    }
+  }
+}
+// end inspiration style
 @media (min-width: 250px) and (max-width: 900px) {
   body {
     padding: 0px 0px;
   }
+
+  // start navbar
+  .navigateContainer {
+    display: block;
+    position: relative;
+
+    .navbarContainer {
+      width: 170px;
+      height: 70vh;
+      padding: 20px 10px;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.3s ease;
+      border-top-left-radius: 10px;
+      ul {
+        display: block;
+      }
+      li {
+        font-size: 17px;
+        margin-right: 0px;
+        margin-bottom: 4px;
+        z-index: 4;
+      }
+    }
+    .frofileContainer {
+      position: absolute;
+      top: 68%;
+      padding: 5px 15px;
+      width: 100px;
+      .user {
+        // color: white;
+      }
+    }
+    .collapse {
+      display: block;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+
+    .navbarContainer.active {
+      background: rgba(128, 128, 128, 0.514);
+      opacity: 1;
+      pointer-events: all;
+      .frofileContainer.active {
+        display: none;
+      }
+    }
+    .frofileContainer {
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.3s ease;
+    }
+    .frofileContainer.active {
+      opacity: 1;
+      pointer-events: all;
+    }
+  }
+  // end navbar
   .mainBanner_container {
     display: block;
     padding: 60px 0px;
-    .main_banner_image img {
-      height: 330px;
+    .main_banner_info {
+      width: 100%;
+      text-align: center;
+      margin: 0;
+    }
+    .main_banner_image {
+      width: 100%;
+      img {
+        height: 330px;
+      }
     }
   }
   .searche_bar_container {
@@ -179,7 +414,70 @@ p {
     .destination_card {
       width: 100%;
       margin-top: 18px;
-      margin-left: 6p;
+      // margin-left: 6px;
+      padding-bottom: 20px;
+      height: auto;
+      .destination_card_banner img {
+        margin-bottom: 20px;
+        height: 300px;
+      }
+    }
+  }
+  // start wite experience style
+  .wite_our_experience_container {
+    position: unset;
+    padding: 5px;
+    text-align: center;
+    .wite_our_experience_content {
+      text-align: center;
+      display: block;
+      .wite_our_experience_banner {
+        width: 100%;
+        img {
+          height: 320px;
+        }
+      }
+
+      .wite_our_experience_info {
+        width: 100%;
+      }
+    }
+
+    .wite_card_top {
+      position: unset;
+      background-color: gainsboro;
+      margin-top: 10px;
+    }
+    .wite_card_right {
+      position: unset;
+      background-color: gainsboro;
+      margin-top: 10px;
+    }
+    .wite_card_bottom {
+      position: unset;
+      background-color: gainsboro;
+      margin-top: 10px;
+    }
+  }
+  // end wite experience
+  // start inspiration style
+  .inspiration_container {
+    padding: 30px;
+    .inspiration_menubar {
+      ul {
+        display: block;
+      }
+      ul li {
+        margin-top: 7px;
+        font-size: 18px;
+      }
+    }
+    .inspiration_card_container {
+      display: block;
+      .inspiration_card {
+        margin-right: 0px;
+        background-color: gainsboro;
+      }
     }
   }
 }
