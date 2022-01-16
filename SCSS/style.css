@@ -10,7 +10,8 @@
 body {
   color: #262626;
   background-color: #ffffff;
-  padding: 5px 88px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 p {
@@ -134,8 +135,8 @@ p {
       -ms-flex-align: center;
           align-items: center;
   position: absolute;
-  top: 96%;
-  left: 13%;
+  bottom: 34px;
+  left: 160px;
   padding: 20px 0px;
   border-radius: 14px;
   overflow: hidden;
@@ -265,6 +266,8 @@ p {
 .wite_our_experience_container .wite_our_experience_content .wite_our_experience_banner img {
   width: 100%;
   height: 600px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .wite_our_experience_container .wite_our_experience_content .wite_our_experience_info {
@@ -370,6 +373,155 @@ p {
   color: #144e5a;
 }
 
+.happy_customer_container {
+  max-width: 1200px;
+  padding: 50px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.happy_customer_container .happy_customer_info {
+  width: 50%;
+  padding: 0px 10px;
+}
+
+.happy_customer_container .happy_customer_info h1,
+.happy_customer_container .happy_customer_info p {
+  margin-bottom: 15px;
+}
+
+.happy_customer_container .happy_customer_info .user_detail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.happy_customer_container .happy_customer_info .user_detail .user_rate_info {
+  margin-right: 100px;
+}
+
+.happy_customer_container .happy_customer_info .user_detail .user_frofile_pic img {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+}
+
+.happy_customer_container .happy_customer_banner {
+  width: 50%;
+}
+
+.happy_customer_container .happy_customer_banner img {
+  height: 400px;
+  width: 100%;
+  border-radius: 9px;
+}
+
+.frequently_asked_container {
+  max-width: 1200px;
+  width: 50%;
+  margin: 0 auto;
+  padding: 40px 0px;
+}
+
+.frequently_asked_container .frequently_asked_title {
+  text-align: center;
+}
+
+.frequently_asked_container .frequently_asked_title h1 {
+  margin-bottom: 20px;
+  font-size: 40px;
+}
+
+.frequently_asked_container .frequently_asked_answer_container {
+  padding: 20px 0px;
+  text-align: center;
+}
+
+.frequently_asked_container .frequently_asked_answer_container .frequently_asked_answer_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.frequently_asked_container .frequently_asked_answer_container .frequently_asked_answer_content .info {
+  margin-bottom: 40px;
+}
+
+.frequently_asked_container .frequently_asked_answer_container .frequently_asked_answer_content .info .hide_info {
+  margin-top: 15px;
+  display: none;
+}
+
+.frequently_asked_container .frequently_asked_answer_container .frequently_asked_answer_content .info .hide_info.col {
+  display: block;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+          box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.frequently_asked_container .frequently_asked_answer_container .frequently_asked_answer_content .collapse_icon h1 i {
+  cursor: pointer;
+}
+
+.subscribe_section_cotnainer {
+  padding: 60px;
+  background-color: #f5e9db;
+}
+
+.subscribe_section_cotnainer .subscribe_title {
+  text-align: center;
+}
+
+.subscribe_section_cotnainer .subscribe_title h1 {
+  margin-bottom: 10px;
+}
+
+.subscribe_section_cotnainer .subscribe_title p {
+  font-size: 15px;
+}
+
+.subscribe_section_cotnainer .subscribe_form {
+  text-align: center;
+  margin-top: 25px;
+}
+
+.subscribe_section_cotnainer .subscribe_form form {
+  position: relative;
+  width: 300px;
+  margin: 0 auto;
+}
+
+.subscribe_section_cotnainer .subscribe_form form input {
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  padding: 15px 0px;
+  width: 300px;
+}
+
+.subscribe_section_cotnainer .subscribe_form form button {
+  border: none;
+  background-color: #144e5a;
+  padding: 8px;
+  border-radius: 20px;
+  position: absolute;
+  right: 3px;
+  top: 7px;
+}
+
 @media (min-width: 250px) and (max-width: 900px) {
   body {
     padding: 0px 0px;
@@ -380,7 +532,7 @@ p {
   }
   .navigateContainer .navbarContainer {
     width: 170px;
-    height: 70vh;
+    height: 190px;
     padding: 20px 10px;
     opacity: 0;
     pointer-events: none;
@@ -399,7 +551,7 @@ p {
   }
   .navigateContainer .frofileContainer {
     position: absolute;
-    top: 68%;
+    bottom: 10px;
     padding: 5px 15px;
     width: 100px;
   }
@@ -528,6 +680,19 @@ p {
   .inspiration_container .inspiration_card_container .inspiration_card {
     margin-right: 0px;
     background-color: gainsboro;
+  }
+  .happy_customer_container {
+    display: block;
+  }
+  .happy_customer_container .user_detail .user_rate_info {
+    margin-right: 0px;
+  }
+  .happy_customer_container .happy_customer_info {
+    width: 100%;
+  }
+  .happy_customer_container .happy_customer_banner {
+    margin-top: 14px;
+    width: 100%;
   }
 }
 /*# sourceMappingURL=style.css.map */
